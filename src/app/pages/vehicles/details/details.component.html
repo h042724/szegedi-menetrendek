@@ -1,0 +1,21 @@
+<div class="main_component div-flex" [ngStyle]="{backgroundImage:'url(../../../../assets/bg1.jpg)'}">
+    <mat-card class="div-flex">
+        <ng-container *ngIf="!vehicleObject ? 0 : vehicleObject.length">
+        <div *ngFor="let vehicle of vehicleObject">
+            <mat-card-header>
+                <mat-card-title> 
+                    <span>{{vehicle.line_id}}</span>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content fxLayout="column">
+            <table>
+                <tr *ngFor="let item of vehicle.schedule | keyvalue"> 
+                    <td>{{item.key | timeFormat }}</td> 
+                    <td>{{item.value}}</td> 
+                </tr>
+            </table>
+        </mat-card-content>
+        </div>
+        </ng-container>
+    </mat-card>
+</div>

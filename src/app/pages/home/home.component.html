@@ -1,0 +1,44 @@
+<div class="main_component div-flex" [ngStyle]="{backgroundImage:'url(../../../assets/bg1.jpg)'}">
+    <mat-card class="div-flex">
+        <div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign="space-evenly center">
+            <div fxFlex>
+                <mat-card-header>
+                    <mat-card-title>
+                        Szeged - a Napfény Városa - vár rád! 
+                        De hogyan juthatsz el a legkönnyebben a látnivalókhoz? 
+                        Használd az alkalmazásunkat, amely megkönnyíti a szegedi tömegközlekedést!
+                    </mat-card-title>
+                </mat-card-header>
+
+                <mat-card-content fxLayout="column">
+                    <span>
+                        Szeged egy gyönyörű város, amely rengeteg élményt kínál a látogatóinak. 
+                        Itt található a híres Dóm tér, ahol megcsodálhatod a Votive templomot, a Dóm Múzeumot és a Dóm Panorámát. 
+                        Itt rendezik meg minden évben az ország legnagyobb szabadtéri színházi fesztiválját is. 
+                        Ha szereted a természetet, ne hagyd ki a Fekete Sas Állat- és Növénykertet, ahol több mint 500 állatfajt láthatsz. 
+                        Ha érdekel a tudomány, látogass el az Agóra Tudományos Élményközpontba, ahol interaktív kiállítások és programok várnak. 
+                        Ha pedig csak kikapcsolódni szeretnél, élvezd a napfényt és a vízpartot a Tisza-parton vagy a Szegedi Szabadtéri Fürdőben.
+                    </span>
+                    <span>
+                        Mindezekhez azonban el kell jutnod valahogy. 
+                        És itt jön képbe az alkalmazásunk, amely segít neked abban, hogy megtaláld a legjobb utazási lehetőségeket Szegeden. 
+                        Az alkalmazásunkkal megnézheted a buszok, trolibuszok és villamosok napi menetrendjét, a járatok pontos indulási és érkezési idejét. 
+                        Így nem kell feleslegesen várnod vagy sétálnod, hanem gyorsan és kényelmesen eljuthatsz bárhová. 
+                        Ha regisztrálsz és bejelentkezel, elmentheted a kedvenc járataidat gyors elérésbe (könyvjelző), így nem kell minden alkalommal újra keresned őket. 
+                        Az alkalmazásunk naprakész információkat ad a járatokról, így nem érhet meglepetés semmilyen változáson vagy késésen.
+                    </span>
+                    <span>Regisztrálj most, és utazz okosan Szegeden! 🚌</span>
+                    <ng-container *ngIf="!(loggedInUser)">
+                        <span fxLayout="row" fxFlex="50%" fxLayoutAlign="center">
+                            <span><button mat-raised-button [ngStyle]="{'background-color': '#0f172a', 'color': 'white'}" [routerLink]="'/login'">Bejelentkezés</button></span>
+                            <span><button mat-raised-button [ngStyle]="{'background-color': '#0f172a', 'color': 'white'}" [routerLink]="'/signup'">Regisztráció</button></span>
+                        </span>
+                    </ng-container>
+                </mat-card-content>
+            </div>
+            <div fxFlex="30%">
+                <img src="../../../assets/IMG_20211130_072405.jpg">
+            </div>
+        </div>      
+    </mat-card>
+</div>

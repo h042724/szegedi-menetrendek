@@ -1,0 +1,20 @@
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.main_component {
+    height: 100vh;
+}
+
+.mat-grid-tile .mat-grid-tile-header, .mat-grid-tile .mat-grid-tile-footer {
+    background-color: rgba(173,216,230,0.3);
+}
+
+mat-icon {
+    color: black;
+    font-size: large;
+}

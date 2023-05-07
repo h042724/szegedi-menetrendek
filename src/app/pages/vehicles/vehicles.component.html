@@ -1,0 +1,27 @@
+<div class="main_component div-flex" [ngStyle]="{backgroundImage:'url(../../../assets/bg1.jpg)'}">
+    <mat-grid-list [cols]="!vehicleObject ? 0 : vehicleObject.length">
+      <mat-grid-tile *ngFor="let vehicle of vehicleObject" [ngStyle]="{'background-color': 'lightblue'}">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h2>{{vehicle.line_id}}</h2>
+            </div>
+              <div class="flip-card-back">
+                <table>
+                  <tr *ngFor="let item of vehicle.schedule | keyvalue"> 
+                    <td>{{item.key}}</td>
+                    <td>{{item.value}}</td>
+                  </tr>
+                </table>
+              </div>
+          </div>
+        </div>
+        <mat-grid-tile-header fxLayout="row" fxLayoutAlign="end">
+          <div *ngIf="loggedInUser" fxLayout="row">
+            <mat-icon [ngStyle]="{'cursor': 'pointer'}" (click)="bookmark(vehicle.line_id)">bookmark_border</mat-icon>
+            <mat-icon [ngStyle]="{'cursor': 'pointer'}" [routerLink]="'/vehicles/' + vehicle.line_id">chevron_right</mat-icon>
+          </div>
+        </mat-grid-tile-header>
+      </mat-grid-tile>
+    </mat-grid-list>
+</div>

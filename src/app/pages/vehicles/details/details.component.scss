@@ -1,0 +1,34 @@
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.mat-card-header, .mat-card-title {
+    font-size: xx-large;
+    line-height: 100%;
+}
+
+mat-card-content {
+    font-size: large;
+    line-height: 100%;
+}
+
+span {
+    padding: 5px 5px 5px 5px;
+
+    .mat-raised-button {
+        font-size: large;
+        padding: 8px 8px 8px 8px;
+    }
+}
+
+.main_component {
+    height: 100vh;
+    align-items: stretch;
+}
+
+mat-card {
+    background-color: rgba(255, 255, 255, 0.7);
+}

@@ -1,0 +1,12 @@
+<div class="main_component div-flex" [ngStyle]="{backgroundImage:'url(../../../assets/bg1.jpg)'}">
+  <mat-grid-list [cols]="!bookmarkObject ? 0 : bookmarkObject.length" rowHeight="2:1">
+    <mat-grid-tile *ngFor="let bookmark of bookmarkObject" [ngStyle]="{'background-color': 'lightblue'}">
+      <h2 [ngStyle]="{'cursor': 'pointer'}" [routerLink]="'/vehicles/' + bookmark.line_id">{{bookmark.line_id}}</h2>
+      <mat-grid-tile-header fxLayout="row" fxLayoutAlign="end">
+        <div>
+          <mat-icon [ngStyle]="{'cursor': 'pointer'}" (click)="removeBookmark(bookmark.id)">cancel</mat-icon>
+        </div>
+      </mat-grid-tile-header>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

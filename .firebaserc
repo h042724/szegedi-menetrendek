@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "szegedi-menetrendek-2023": {
+      "hosting": {
+        "week-04": [
+          "szegedi-menetrendek-2023"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "szegedi-menetrendek-2023"
+  }
+}
